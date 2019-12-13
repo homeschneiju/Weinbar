@@ -1,4 +1,5 @@
 
+
 library(data.table); library(tidyverse)
 wein <- fread("./Weinbar.csv")
 
@@ -19,10 +20,10 @@ wein$country <- as.factor(wein$country)
 wein$region <- as.factor(wein$region)
 
 # catalogue:
-## pinot noir = sp�tburgunder = pinot nero
+## pinot noir = spÃ¤tburgunder = pinot nero
 ## pinot grigio = grauburgunder = grauer burgunder = pinot gris 
 ## grenache = garnacha = cannonau
-wein$grape[wein$grape %in% "Pinot Noir" | wein$grape %in% "Pinot Nero" | wein$grape %in% "Sp�tburgunder"] <- "Pinot Noir"
+wein$grape[wein$grape %in% "Pinot Noir" | wein$grape %in% "Pinot Nero" | wein$grape %in% "SpÃ¤tburgunder"] <- "Pinot Noir"
 wein$grape[wein$grape %in% "Pinot Grigio" | wein$grape %in% "Pinot Gris" | wein$grape %in% "Grauburgunder" | wein$grape %in% "Grauer Burgunder"] <- "Pinot Gris"
 wein$grape[wein$grape %in% "Grenache" | wein$grape %in% "Cannonau" | wein$grape %in% "Garnacha"] <- "Grenache"
 
