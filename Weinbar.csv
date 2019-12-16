@@ -1,0 +1,93 @@
+name;grape;colour;country;region;vineyard;description;store;Alcohol;price;year;liked;tested
+Brunello di Montalcino;Sangiovese;red;Italy;Toscana;;saeuerlich, voll, barrique;Aldi;;12,99;;no;yes
+Bourgogne Gamay Noir;Gamay Noir;red;France;Bourgogne;;sauer;Aldi Nord;13;3,99;2016;no;yes
+Gocce di Granato;Cabernet, Sangiovese, Malbo Gentile;red;Italy;Emilia-Romagna;Folicello;tannin, beerig, suess;Balera;13;7;;yes;yes
+Cabernet Franc;Cabernet Sauvignon, Cabernet Franc;red;Italy;Veneto;Le Baite;leicht, flach, hell;Balera;12,5;7;;no;yes
+Merlot;Merlot;red;;;;sueffig, trocken;Bar;;;;yes;yes
+Garnacha;Garnacha;red;Spain;;;sueffig;Bar;;5,3;;yes;yes
+Regent;Regent;red;oesterreich;;;suess;Bar;;;;yes;yes
+Les Aromes de France;Cabernet Sauvignon;red;France;Pays d'Oc;Edeka Eigenmarke;weich, rund, sueffig;Edeka;13;3,99;;yes;yes
+Bio No Name;Cabernet Sauvignon;red;Spain;Castilla;Edeka Eigenmarke;;Edeka;13;3,99;2018;;no
+Overseas;Cabernet Sauvignon;red;USA;California;Edeka Eigenmarke;;Edeka;12,5;3,49;2017;;no
+Overseas;Cabernet Sauvignon;red;Suedafrika; ;Edeka Eigenmarke;;Edeka;13;3,49;2017;;no
+Solaz;Tempranillo, Cabernet Sauvignon;red;Spain;;Osborne;barrique, tannin;Edeka. Rewe;13,5;4,99;;yes;yes
+Salice Salento;Malvasia Nera, Primitivo, Negroamaro;red;Italy;Puglia;Luce del Sole;;Galeria Kaufhof;;;;;no
+Malvasia Nera;Malvasia Nera;red;Italy;Puglia;Luce del Sole;beerig;Galeria Kaufhof;13,5;8,99;2017;yes;yes
+Domaine de la Combe Dieau;Garnacha, Mourvedre, Syrah ;red;France;Rateau;Cellier de Saint Jea;natural;Lidl;15;8,99;2016;;no
+Richtig Lecker;Cabernet Sauvignon;red;Romania;Banat;Mack & Schuehle;sueffig, voll;Penny;13;2,99;2016;yes;yes
+Valpolicella Ripasso;Valpolicella;red;Italy;Emilia-Romagna;;;Rewe;;;;;no
+Santoro Negroamaro;Negroamaro;red;Italy;Puglia;OSM San Marzano;;Rewe;12,5;2,99;2018;yes;yes
+Corvina Garda;Corvina;red;Italy;Veneto;;;Rewe;;;;;no
+Tempranillo;Tempranillo;red;Spain;;;sueffig;;;;;yes;yes
+Nero d'Avola;Nero d'Avola;red;Italy;Sicilia;;;;;;;yes;yes
+Barbera d'Asti;Barbera;red;Italy;Emilia-Romagna;;;;;;;;yes
+Barbera Appassimento;Barbera;red;Italy;;;;;;;;yes;yes
+Chianti;Sangiovese;red;Italy;Toscana;;saeuerlich;;;;;no;yes
+Chianti Riserva;Sangiovese;red;Italy;Toscana;;riserva;;;;;yes;yes
+Primitivo;Primitivo;red;Italy;;;leicht, flach;;;;;no;yes
+Cannonau;Garnacha;red;Italy;Sardegna;;sueffig;;;;;yes;yes
+Pinot Noir;Pinot Noir;red;;;;;;;;;no;no
+Cabernet Sauvignon;Cabernet Sauvignon;red;Argentina;;;voll, rund;;;;;yes;yes
+Sagrantino di Montefalco;Sagrantino;red;Italy;Umbria;;schwer;;;;;yes;yes
+Bacca nera Salento;Negroamaro, Primitivo;red;Italy;Puglia;Botter;saeuerlich, voll ;;;7,99;;yes;yes
+Spaetburgunder Qualitaetswein;Pinot Noir;red;Deutschland;Ihringer Kaiserstuhl;Karl Karle;saeuerlich, mittelschwer, ausgewogen;;;6,7;2017;no;yes
+Castillo Peracense;Garnacha, Tempranillo, Carinena;red;Spain;Carinena;Bodegas Ignacio Marin;leicht, frisch;Norma;13,5;2,99;2017;yes;yes
+Vinho Verde;Touriga Nacional, Espadeiro;rose;Portugal;;Casal Mirandinho;leicht;;;5,4;;yes;yes
+Rotkaeppchen trocken;cuvee;secco;Deutschland;Unstrut;Rotkaeppchen Sektkellerei;spritzig, suesslich, saeuerlich;Kaufland, Rewe, Penny, Aldi, Lidl;11;3,99;2018;yes;yes
+Rotkaeppchen halbtrocken;cuvee;secco;Deutschland;Unstrut;Rotkaeppchen Sektkellerei;;Kaufland, Rewe, Penny, Aldi, Lidl;11;3,99;2018;;no
+Rotkaeppchen mild;cuvee;secco;Deutschland;Unstrut;Rotkaeppchen Sektkellerei;;Kaufland, Rewe, Penny, Aldi, Lidl;10,5;3,99;2018;;no
+Rotkaeppchen rose trocken;cuvee;secco;Deutschland;Unstrut;Rotkaeppchen Sektkellerei;;Kaufland, Rewe, Penny, Aldi, Lidl;11;3,99;2018;;no
+Grauburgunder;Grauburgunder;white;Deutschland;;;saeuerlich;Aldi Sued;13;3,29;;no;yes
+Vermentino di Gallura;Vermentino;white;Italy;Sardegna;;;Aldi Nord;12,5;3,59;2018;;no
+Grechetto;Grechetto;white;Italy;Emilia-Romagna;;leicht, herb, Trockenobst;Balera;;7;;no;yes
+Sauvignon Blanc;Sauvignon Blanc;white;Italy;Piemonte;;leicht;Bar;;;;yes;yes
+Rivaner;Rivaner;white;Germany;Rheinhessen;;saeuerlich;Biowein Store;;;;no;yes
+;Cortese;white;Italy;Piemonte;;natural, Trockenobst, Herbst, suess;Biowein Store;;;;yes;yes
+Gutedel Cuvee Blanc;Gutedel, Gewuerztraminer;white;Germany;Baden;Zotz;sueffig;Galeria Kaufhof;;5,99;;;no
+Heitersheimer Maltesergarten Weisser Gutedel;Gutedel;white;Germany;Baden;Zotz;sueffig;Galeria Kaufhof;12;5,99;2018;;no
+Rocca Trentatre Bianco Chardonnay Terre Siciliane;Chardonnay;white;Italy;Sicilia;Rocca Trentatre;;Galeria Kaufhof;;6,99;;;no
+Pecorino Terre di Chieti;Pecorino;white;Italy;Abruzze;Cantine Spinelli;;Galeria Kaufhof;;6,49;;;no
+Sauvignon Blanc;Sauvignon Blanc;white;France;Pays d'Oc;Les Jamelles;;Galeria Kaufhof;12,5;8,49;2017;;no
+Sauvignon Blanc;Sauvignon Blanc;white;France;Cotes de Gascogne;Domaine du Tariquet;;Galeria Kaufhof;;5,99;;;no
+Falanghina;Falanghina;white;Italy;Puglia;;leicht, suess;Galeria Kaufhof;13,5;7,99;2017;yes;yes
+Vernaccia di San Gimignano;Vernaccia;white;Italy;Toscana;;frisch;Galeria Kaufhof;;5,99;;yes;yes
+Chenin Blanc;Chenin Blanc;white;Suedafrika;Western Cape;Vineris;suess;Lidl;12,5;2,59;2018;yes;yes
+Verde Ca' Ruptae;Verdicchio dei Castelli di Jesi;white;Italy;Marche;Terre Cortesi Moncaro;;Lidl;13,5;4,99;2016;;no
+Jacques Germanier;Chardonnay, Sauvignon Blanc;white;Suedafrika;;Sophie Germanier;leicht, herb;Netto;;4,99;;no;yes
+Villa am Weinberg;Scheurebe;white;Germany;Rheinhessen;Rheinberg Kellerei GmbH;suess, feinherb;Netto;11;1,99;;yes;yes
+Richtig Lecker;Sauvignon Blanc;white;Romania;Banat;Mack & Schuehle;saeuerlich;Penny;12,5;2,99;2016;no;yes
+La Baume 2018;Sauvignon Blanc;white;France;Pays d'Oc;La Baume;leicht;Rewe;;5,99;;yes;yes
+Akzente;Riesling;white;Deutschland;Mosel;Moselland;suess, sueffig;Rewe;;4,79;;yes;yes
+Gewuerztraminer;Gewuerztraminer;white;France;Alsace;;suess;;;;;yes;yes
+Riesling;Riesling;white;Deutschland;Franken;;sauer;;;;;no;yes
+Silvaner;Silvaner;white;Deutschland;Franken;;;;;;;no;yes
+Rivaner;Rivaner;white;Deutschland;Franken;;sueffig, suess;;;;;yes;yes
+Grillo;Grillo;white;Italy;Sicilia;;;;;;;no;yes
+Soave;Soave;white;Italy;Veneto;;frisch, leicht;;;;;yes;yes
+Reserve Pierre;Garnacha, Mourvedre, Syrah ;white;France;Cotes de Nimes;Pierre Vidal;flach, duftend, leicht;;;7,99;;no;yes
+Einzylinder Cuvee;Chardonnay, Grauer Burgunder, Weisser Burgunder;white;Germany;Rheinhessen;Wasem;barrique, leicht;;;10,5;;yes;yes
+Bio Weisswein;Riesling, Rivaner;white;Deutschland;Mosel;St. Michael Weinkellerei;Steinobst, suess;Norma;11;2,99;2018;yes;yes
+Mocen;Verdejo;white;Spain;Rueda;Bodegas Mocen;Trockenobst, suess, wuerzig;Norma;12,5;2,99;2018;yes;yes
+Mezzacorona;Grauburgunder;white;Italy;Trentino;;leicht;Kaufland ;12,5;4,99;2018;yes;yes
+Die Jungen Franken;Mueller-Thurgau;white;Deutschland;Franken;Winzergemeinschaft Franken;frisch, unkompliziert;Kaufland, Rewe, Marktkauf, Norma;11,5;4,49;2018;yes;yes
+Finca de la Vega;Verdejo;white;Spain;Rueda;Avelino Vegas;Steinobst, frisch, sÅ·;Edeka;13;3,99;2018;yes;yes
+Grauer Burgunder;Grauburgunder;white;Deutschland;Ihringer Kaiserstuhl;Kaiserstuehler Winzergenossenschaft Ihringen eG;sueffig, frisch, suess, leicht;;13;5,8;2018;yes;yes
+Concilio;Merlot;red;Italy;Trentino;Concilio;sauer, tannin, trocken;;13;5,9;2017;no;yes
+Kaiserstuhl Grauer Burgunder;Grauburgunder;white;Deutschland;Baden, Kaiserstuhl;Weinland Baden;sueffig, frisch, suess, leicht;;13,5;3,99;2018;yes;yes
+Dogajolo Toscano;Cabernet;red;Italy;Toscana;Carpineto;;Vino;13;;2016;;no
+Grauer Burgunder vom Kalkstein;Grauburgunder;white;Deutschland;Pfalz;Reh Kendermann;leicht, frisch, mineralisch;Rewe;13;4,99;2018;yes;yes
+Cala del Verde;Nero d'Avola;red;Italy;Sicilia;Bardolino Loc Colombara;wÅrzig, sÅ·, sauer;Lidl;13;2,79;2018;yes;yes
+Cabernet Sauvignon Reserva Privada;Cabernet Sauvignon;red;Chile;Valle CentralRosecreek;;leicht, sÅffig, trocken;Lidl;13;3,99;2018;yes;yes
+Duo Enira;Merlot, Syrah;red;Bulgaria;Ognianovo;Bessa Valley;Himbeere, fruchtig;;14,5;9,8;2017;yes;yes
+Barcelino;Tempranillo, Garnacha ;red;Spain;Catalunya;ARSA;trocken, tannin;Lidl;13,5;3,99;2017;yes;yes
+W¸rzburger Sp‰tburgunder;Sp‰tburgunder;red;Germany;Franken;Juliusspital;trocken, leicht, s‰uerlich;;13;11;2017;yes;yes
+Prosecco Treviso;Glera ;secco;Italy;Veneto;LMVS;trocken, leicht;Lidl;10,5;2,99;2018;yes;yes
+Bold & Spicy Pinotage;Pinotage;red;Suedafrika;Western Cape;Vineris;barrique, trocken, Leder, Holz;Lidl;14;3,99;2018;yes;yes
+Dark Horse;Chardonnay;white;USA;California;Dark Horse;Butter, holzig, barrique, sur lie;Walmart;13,5;7,99;2018;no;yes
+Teroldego Rotaliano Superiore Riserva;Teroldego;red;Italy;S¸dtirol;VEB;s‰uerlich, flach, mild;Lidl;13;3,99;2015;no;yes
+La Belle Angele;Merlot;red;France;;;s‰uerlich, herb, mild;Getraenke Hoffmann;13;4,5;2018;no;no
+Clos de Torribas Crianza;Tempranillo;red;Spain;Penedes;Pinord;beerig, voll, samtig, s‰uerlich, barrique;;13;5,39;2015;yes;yes
+Chianti Classico Castello di Querceto;Sangiovese;red;Italy;Toscana;Castello di Querceto;sauer, tannin, trocken;;13;11;2017;no;yes
+Fairwine Cabernet Sauvignon & Merlot;Carbernet Sauvignon, Merlot;red;South Africa;;Mertes KG;s¸ﬂ, samtig, beerig;Rewe;13,5;4,5;2016;yes;yes
+Cabernet Sauvignon Barrique Pfalz;Cabernet Sauvignon;red;Germany;Pfalz;Brems GmbH;Soja, S¸ﬂkirsche, barrique, s¸ﬂ;Lidl;12,5;4,5;2018;yes;yes
+Merlot;Merlot;red;France;Pays d'Oc;Rheinberg Kellerei GmbH;s¸ﬂ, samtig, beerig;Edeka;13;1,99;2018;yes;yes
