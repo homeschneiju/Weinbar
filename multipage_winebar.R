@@ -3,6 +3,10 @@ library(shiny)
 
 library(markdown)
 
+source("./weintree.R")
+
+
+
 ui = navbarPage("Navbar!",
            tabPanel("Plots",
                   
@@ -55,44 +59,74 @@ ui = navbarPage("Navbar!",
 server = function(input, output, session) {
   output$grapePlot <- renderPlot({
     
-    barplot(sort(table(wein$grape), decreasing = TRUE)[1:5],
-            main = "Popular grapes",
-            xlab = "Grape",
-            ylab = "Number of wines liked",
-            col= "darkred")
+    # barplot(sort(table(wein$grape), decreasing = TRUE)[1:5],
+    #         main = "Popular grapes",
+    #         xlab = "Grape",
+    #         ylab = "Number of wines liked",
+    #         col= "darkred")
+    grapeplot_df %>%
+      ggplot(aes(x = reorder(grape, -n), y = n, fill=colour)) +
+      geom_bar(stat = 'identity') +
+      theme_dark()+
+      xlab("Grape")+ylab("Number of wines liked")+
+      scale_fill_manual(values=c("darkred", "cornsilk"))+
+      title("Popular grapes")
+    
     
     
   })
   
   output$pricePlot <- renderPlot({
     
-    barplot(sort(table(wein$price), decreasing = TRUE)[1:5],
-            main = "Price range",
-            xlab = "Price",
-            ylab = "Number of wines liked",
-            col= "darkred")
+    # barplot(sort(table(wein$price), decreasing = TRUE)[1:5],
+    #         main = "Price range",
+    #         xlab = "Price",
+    #         ylab = "Number of wines liked",
+    #         col= "darkred")
+   priceplot_df %>%
+      ggplot(aes(x = reorder(price, -n), y = n, fill = "darkblue")) +
+      geom_bar(stat = 'identity') +
+      theme_dark()+
+      xlab("Price")+ylab("Number of wines liked")+
+      scale_fill_manual(values=c("darkblue"))+
+      title("Favourite price range")
     
     
   })
   
   output$countryPlot <- renderPlot({
     
-    barplot(sort(table(wein$country), decreasing = TRUE)[1:5],
-            main = "Popular countries",
-            xlab = "Country",
-            ylab = "Number of wines liked",
-            col= "darkred")
+    # barplot(sort(table(wein$country), decreasing = TRUE)[1:5],
+    #         main = "Popular countries",
+    #         xlab = "Country",
+    #         ylab = "Number of wines liked",
+    #         col= "darkred")
+ countryplot_df %>%
+      ggplot(aes(x = reorder(country, -n), y = n, fill = country)) +
+      geom_bar(stat = 'identity') +
+      theme_dark()+
+      xlab("Price")+ylab("Number of wines liked")+
+      scale_fill_manual("Legend", values = dd.col)+
+      title("Favourite countries")
     
     
   })
   
   output$regionPlot <- renderPlot({
     
-    barplot(sort(table(wein$region[wein$country == names(sort(table(wein$country), decreasing = TRUE)[1])]), decreasing = TRUE)[1:5],
-            main = "Popular regions in favourite country",
-            xlab = "Region",
-            ylab = "Number of wines liked",
-            col= "darkred")    
+    # barplot(sort(table(wein$region[wein$country == names(sort(table(wein$country), decreasing = TRUE)[1])]), decreasing = TRUE)[1:5],
+    #         main = "Popular regions in favourite country",
+    #         xlab = "Region",
+    #         ylab = "Number of wines liked",
+    #         col= "darkred")  
+    regionplot_df %>%
+      ggplot(aes(x = reorder(region, -n), y = n, fill=country)) +
+      geom_bar(stat = 'identity') +
+      theme_dark()+
+      xlab("Region")+ylab("Number of wines liked")+
+      scale_fill_manual("Legend", values = dd.col)+
+      title("Popular regions")
+      
     
   })
   

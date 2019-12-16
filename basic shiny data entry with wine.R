@@ -4,7 +4,6 @@ library(data.table)
 library(DT)
 library(installr)
 source("./weintree.R")
-wein <- readRDS("C:/Users/Juliana Schneider/Documents/dataentry/prod/datafiles/Weinbar.rds")
 
 # Define the fields we want to save from the form
 fields <- colnames(wein)

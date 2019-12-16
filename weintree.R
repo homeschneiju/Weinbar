@@ -28,11 +28,35 @@ wein$grape[wein$grape %in% "Pinot Grigio" | wein$grape %in% "Pinot Gris" | wein$
 wein$grape[wein$grape %in% "Grenache" | wein$grape %in% "Cannonau" | wein$grape %in% "Garnacha"] <- "Grenache"
 
 
+grapeplot_df <- wein %>%
+  count(grape) %>%
+  arrange(desc(n)) %>%
+  slice(1:5) %>%
+  left_join(wein[,c("grape", "colour")])
 
-barplot(sort(table(wein$region[wein$country == names(sort(table(wein$country), decreasing = TRUE)[1])]), decreasing = TRUE)[1:5],
-        main = "Popular regions in favourite country",
-        xlab = "Region",
-        ylab = "Portion of wines liked")
+priceplot_df <-  wein %>%
+  count(price) %>%
+  arrange(desc(n)) %>%
+  na.omit() %>%
+  slice(1:5)
+
+countryplot_df <- wein %>%
+  count(country) %>%
+  arrange(desc(n)) %>%
+  na.omit() %>%
+  slice(1:5)
+
+regionplot_df <- wein %>%
+  filter(country == names(sort(table(wein$country), decreasing = TRUE)[1])) %>%
+  count(region) %>%
+  arrange(desc(n)) %>%
+  slice(1:5) %>%
+  left_join(wein[,c("country", "region")])
+
+
+dd <- union(countryplot_df$country,regionplot_df$country)
+dd.col <- rainbow(length(dd))
+names(dd.col)  <- dd
 
 saveRDS(wein, "./Weinbar.rds")
 

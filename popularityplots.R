@@ -2,7 +2,6 @@
 library(shiny)
 
 source("./weintree.R")
-wein <- readRDS("C:/Users/Juliana Schneider/Documents/dataentry/prod/datafiles/Weinbar.rds")
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
