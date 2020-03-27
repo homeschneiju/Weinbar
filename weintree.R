@@ -1,23 +1,16 @@
-
-
-library(data.table); library(tidyverse)
+setwd("C:/Users/Juliana Schneider/dev/Weinbar/")
+install.load::install_load(c("assertr", "data.table", "tidyverse"))
 wein <- fread("./Weinbar.csv")
-
-
+source("./utils/prepare_data.R")
 
 # PREPARE DATA
-wein$price <- gsub(",",".",wein$price)
-wein$Alcohol <- gsub(",",".",wein$Alcohol)
-wein$year <- as.integer(wein$year)
-wein$Alcohol <- as.numeric(wein$Alcohol)
-wein$price <- as.numeric(wein$price)
-wein <- wein[which(wein$liked != ""),]
-wein <- wein[which(wein$country != ""),]
-wein$tested <- as.factor(wein$tested)
-wein$liked <- as.factor(wein$liked)
-wein$colour <- as.factor(wein$colour)
-wein$country <- as.factor(wein$country)
-wein$region <- as.factor(wein$region)
+
+
+
+wein <- adjust_classes(wein)
+
+
+
 
 # catalogue:
 ## pinot noir = spÃ¤tburgunder = pinot nero
