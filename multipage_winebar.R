@@ -4,10 +4,24 @@ library(shiny)
 library(markdown)
 
 source("./weintree.R")
-
+source("./bubble_maps.R")
 
 
 ui = navbarPage("Navbar!",
+                tabPanel("Bubble Map",
+                         
+                         
+                         # App title ----
+                         titlePanel("Bubble map"),
+                         
+                         mainPanel(
+                           
+                           # Output: popular regions ----
+                             plotOutput(outputId = "BubbleMap")
+                            
+                         )
+                         
+                ),
            tabPanel("Plots",
                   
                       
@@ -57,6 +71,17 @@ ui = navbarPage("Navbar!",
 
 
 server = function(input, output, session) {
+  output$BubbleMap <- renderPlot({
+    
+    ggplot(data=world) +
+      geom_sf()+
+      geom_sf(data =wc, aes(fill=Anzahl)) +
+      scale_fill_gradient(low="blue", high="red")
+    
+    
+    
+  })
+  
   output$grapePlot <- renderPlot({
     
     # barplot(sort(table(wein$grape), decreasing = TRUE)[1:5],
@@ -106,7 +131,7 @@ server = function(input, output, session) {
       geom_bar(stat = 'identity') +
       theme_dark()+
       xlab("Price")+ylab("Number of wines liked")+
-      scale_fill_manual("Legend", values = dd.col)+
+      scale_fill_manual("Legend", values = country_col.col)+
       title("Favourite countries")
     
     
@@ -124,7 +149,7 @@ server = function(input, output, session) {
       geom_bar(stat = 'identity') +
       theme_dark()+
       xlab("Region")+ylab("Number of wines liked")+
-      scale_fill_manual("Legend", values = dd.col)+
+      scale_fill_manual("Legend", values = country_col.col)+
       title("Popular regions")
       
     

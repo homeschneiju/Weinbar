@@ -1,24 +1,19 @@
+rm(list=ls())
 setwd("C:/Users/Juliana Schneider/dev/Weinbar/")
 install.load::install_load(c("assertr", "data.table", "tidyverse"))
 wein <- fread("./Weinbar.csv")
 source("./utils/prepare_data.R")
 
+
 # PREPARE DATA
 
 
 
+wein <- translate_grapes(wein)
 wein <- adjust_classes(wein)
 
 
-
-
-# catalogue:
-## pinot noir = spÃ¤tburgunder = pinot nero
-## pinot grigio = grauburgunder = grauer burgunder = pinot gris 
-## grenache = garnacha = cannonau
-wein$grape[wein$grape %in% "Pinot Noir" | wein$grape %in% "Pinot Nero" | wein$grape %in% "SpÃ¤tburgunder"] <- "Pinot Noir"
-wein$grape[wein$grape %in% "Pinot Grigio" | wein$grape %in% "Pinot Gris" | wein$grape %in% "Grauburgunder" | wein$grape %in% "Grauer Burgunder"] <- "Pinot Gris"
-wein$grape[wein$grape %in% "Grenache" | wein$grape %in% "Cannonau" | wein$grape %in% "Garnacha"] <- "Grenache"
+wein <- translate_regions(wein)
 
 
 grapeplot_df <- wein %>%
@@ -26,6 +21,7 @@ grapeplot_df <- wein %>%
   arrange(desc(n)) %>%
   slice(1:5) %>%
   left_join(wein[,c("grape", "colour")])
+
 
 priceplot_df <-  wein %>%
   count(price) %>%
@@ -46,52 +42,9 @@ regionplot_df <- wein %>%
   slice(1:5) %>%
   left_join(wein[,c("country", "region")])
 
+country_col <- union(countryplot_df$country,regionplot_df$country)
+country_col.col <- rainbow(length(country_col))
+names(country_col.col) <- unique(countryplot_df$country)
 
-dd <- union(countryplot_df$country,regionplot_df$country)
-dd.col <- rainbow(length(dd))
-names(dd.col)  <- dd
 
 saveRDS(wein, "./Weinbar.rds")
-
-# # FEATURE: FILTER BY LAND, COLOUR
-# land <- "Germany"
-# col <- "red"
-# 
-# if(nrow(wein[wein$country == land & wein$colour == col,]) == 0){sprintf("Sorry, you haven't had a %s from %s yet", col, land)
-#   }else {print(wein[wein$country == land & wein$colour == col & wein$liked == "yes",])}
-# 
-# # FEATURE: SEARCH BY DESCRIPTION
-# i <- "sueffig"
-# wein[i %in% wein$description,]
-# 
-# 
-# # FEATURE: RECOMMENDER
-# val <- wein[,c("liked","grape", "colour", "country", "region")]
-# library(kernlab);library(caret)
-# weinlike <- train(y=val$liked[complete.cases(val)],
-#                   x=valdum,
-#                   method="svmRadial",
-#                   trControl = trainControl(method="cv"))
-# valdum <- model.matrix(liked~.,val[complete.cases(val),])
-# valdum <- valdum[,2:ncol(valdum)]
-# 
-# head(valdum)
-# any(is.na(wein$liked[complete.cases(wein)]))
-# wein$liked
-# nrow(val)
-# 
-# 
-# 
-# 
-# # grap <- strsplit(wein$grape, ", ")
-# # desc <- strsplit(wein$description, ", ")
-# # 
-# # max(sapply(grap,length))
-# # max(sapply(desc,length))
-# # 
-# # 
-# # 
-# # library(tidyverse)
-# # wein$grape <- as.factor(wein$grape)
-# # wein <- wein %>% separate(grape, paste("grape", c(1:max(sapply(grap,length))), sep=""),", ")
-# # wein <- wein %>% separate(description, paste("descr", c(1:max(sapply(desc,length))), sep=""), ", ")

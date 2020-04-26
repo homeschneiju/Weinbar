@@ -16,20 +16,25 @@ adjust_classes <- function(weini){
 }
 
 # Sys.setenv(RETICULATE_PYTHON="C:\\Users\\Juliana\ Schneider\\Anaconda3\\envs\\py374\\python.exe")
-# use_python("C:\\Users\\Juliana\ Schneider\\Anaconda3\\envs\\py374\\python.exe", required=TRUE)
 # use_condaenv("py374")
 # py_config()
 # py_install("translate", pip=TRUE,envname="py374")
 # py_install("lxml", pip=TRUE,envname="py374", ignore_installed=TRUE)
 
-library(reticulate)
+install.load::install_load(c("reticulate", "purrr"))
+use_python("C:\\Users\\Juliana\ Schneider\\Anaconda3\\envs\\py374\\python.exe", required=TRUE)
 trans <- import("translate")
 lator <- trans$Translator(from_lang="de", to_lang="en")
 
-install.load::install_load("purrr")
-lator$translate(wein[1,c("region")])
-lapply(wein[,c("region")], function(x) lator$translate(x))
-translate_data <- function(weini){
+translate_regions <- function(weini){
+  weini <- setDF(weini)
+  transregions <- purrr::map(weini[,c("region")], ~lator$translate(.))
+transregions <- as.vector(unlist(transregions))
+weini$transregions <- transregions
+return(weini)
+}
+
+translate_grapes <- function(weini){
   # catalogue:
   ## pinot noir = spätburgunder = pinot nero
   ## pinot grigio = grauburgunder = grauer burgunder = pinot gris 
@@ -37,13 +42,6 @@ translate_data <- function(weini){
   weini$grape[weini$grape %in% "Pinot Noir" | weini$grape %in% "Pinot Nero" | weini$grape %in% "Spätburgunder"] <- "Pinot Noir"
   weini$grape[weini$grape %in% "Pinot Grigio" | weini$grape %in% "Pinot Gris" | weini$grape %in% "Grauburgunder" | weini$grape %in% "Grauer Burgunder"] <- "Pinot Gris"
   weini$grape[weini$grape %in% "Grenache" | weini$grape %in% "Cannonau" | weini$grape %in% "Garnacha"] <- "Grenache"
-  
+  return(weini)
 }
 
-install.load::install_load("deeplr")
-
-test <- data.frame(land = c("Deutschland", "Frankreich", "Italien"),
-                   region = c("Bayern", "Burgund", "Toskana"),
-                   city = c("N�rnberg", "Dijon", "Florenz"))
-translate_data(test$land, domain = )
-?gettext
