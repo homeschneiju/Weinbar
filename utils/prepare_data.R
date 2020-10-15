@@ -1,3 +1,6 @@
+rm(list=ls())
+
+
 adjust_classes <- function(weini){
   weini$price <- gsub(",",".",weini$price)
   weini$Alcohol <- gsub(",",".",weini$Alcohol)
@@ -14,6 +17,19 @@ adjust_classes <- function(weini){
   
   return(weini)
 }
+change_synonymes <- function(df){
+  
+  grapes <- df["grape"]
+  if(!any(is.na(df["synonyme"]))){
+    syn <- sprintf("(%s)",df["synonyme"])
+    grape <- aregexec(syn, grapes, max.distance = 10)
+    replgrape <- regmatches(x=grapes, m=grape)
+    df["grape"] <- gsub(replgrape[[1]][1], df["grape_variety"], grapes)
+  }
+  
+  return(df)
+}
+
 
 # Sys.setenv(RETICULATE_PYTHON="C:\\Users\\Juliana\ Schneider\\Anaconda3\\envs\\py374\\python.exe")
 # use_condaenv("py374")
@@ -21,9 +37,9 @@ adjust_classes <- function(weini){
 # py_install("translate", pip=TRUE,envname="py374")
 # py_install("lxml", pip=TRUE,envname="py374", ignore_installed=TRUE)
 
-install.load::install_load(c("reticulate", "purrr"))
+install.load::install_load(c("reticulate", "purrr", "assertr", "data.table", "glue","tidyverse", "stringi", "fuzzyjoin", "splitstackshape"))
 use_python("C:\\Users\\Juliana\ Schneider\\Anaconda3\\envs\\py374\\python.exe", required=TRUE)
-trans <- import("translate")
+trans <- import("translate_wine")
 lator <- trans$Translator(from_lang="de", to_lang="en")
 
 translate_regions <- function(weini){
@@ -44,4 +60,33 @@ translate_grapes <- function(weini){
   weini$grape[weini$grape %in% "Grenache" | weini$grape %in% "Cannonau" | weini$grape %in% "Garnacha"] <- "Grenache"
   return(weini)
 }
+
+setwd("C:/Users/Juliana Schneider/dev/Weinbar/")
+
+wein <- fread("./Weinbar2.csv", encoding="UTF-8")
+varietals <- fread("./grapevarietals.csv", encoding="UTF-8")
+
+unify_letters <- function(x){stringi::stri_replace_all_fixed(x, c("ä", "ö", "ü", "Ä", "Ö", "Ü", "ß"), 
+                                c("ae", "oe", "ue", "Ae", "Oe", "Ue", "ss"), 
+                                vectorize_all = FALSE)}
+
+
+varietals <- as.data.frame(sapply(varietals, function(x) unify_letters(x)))
+
+varietals <- varietals %>% 
+  mutate(synonyme = strsplit(as.character(synonyme), ", ")) %>% 
+  mutate(synonyme = str_replace(synonyme, "\n", "")) #%>%
+  unnest(synonyme) %>%
+  as.data.frame(.)
+
+
+
+wein <- as.data.frame(sapply(wein, function(x) stringi::stri_replace_all_fixed(x, c("Ã¤", "Ã¶", "Ã¼", "Ã„", "Ã–", "Ãœ", "ÃŸ"), 
+                                                                               c("ae", "oe", "ue", "Ae", "Oe", "Ue", "ss"), 
+                                                                               vectorize_all = FALSE)))
+
+
+
+
+wein <- wein %>% fuzzy_left_join(varietals, by = c("grape" = "synonyme"), match_fun = str_detect)
 
