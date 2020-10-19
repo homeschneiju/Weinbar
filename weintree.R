@@ -7,7 +7,7 @@ source("./utils/prepare_data.R")
 
 
 wein_grapes2 <- cSplit(wein, "grape", ",")
-
+wein["burgunder" %in% wein$grape,]
 df_test <- wein[!is.na(wein$synonyme),][1:2,]
 !is.na(df_test$synonyme)
 change_synonymes(df_test[2,])

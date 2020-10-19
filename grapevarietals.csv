@@ -1,27 +1,27 @@
-grape_variety;synonyme
-Grenache;Garnacha, Cannonau, Alicante, Grenache noir, Granacha Negra, Granacha Tinta, Garnatxa, Guarnaccia
-Pinot Noir;Pinot Nero, Sp√§tburgunder, Blauburgunder, Blauer Augustiner, Clevner, Cortaillod, Blauer Sp√§tburgunder
-Chardonnay;Arboisier, Auvernas Blanc, Auxerrois Blanc, Chablis, Gelber Burgunder, Weisser Rul√§nder
-Primitivo;Plavac Veliki, Zinfandel
-Gutedel;Abelone, Chasselas, Fendant, White Sweetwater, Wei√üer Gutedel, Roter Gutedel, Chasselas
-Pinot Gris;Grauburgunder, Grauer Burgunder, Pinit grigio, Rul√§nder
-Mencia;Ja√©n du D√£o
-Carignan;Carignano, Cari√±ena, Mazuelo
-Lemberger;Blaufr√§nkisch, Blauer Lemberger
-Mourv√®dre;Monastrell, Mataro
-Syrah;Shiraz
-Tempranillo;Aragon√©s, Tinta Roriz, Tinto Fino, Tinto de Toro, Tinta del Pais
-Trollinger;"Blauer Trollinger, 
-Vernatsch"
-Pinot Blanc;Wei√üburgunder, Wei√üer Burgunder, Pinot bianco
-Elbling;Wei√üer Elbling, Roter Elbling
-Fr√ºhburgunder;Blauer Fr√ºhburgunder
-Malinger;Fr√ºher Malinger
-Malvasier;Fr√ºher roter Malvasier, Malvoisie
-M√ºllerrebe;Schwarzriesling, Pinot Meunier
-M√ºller-Thurgau;Rivaner
-Muskateller;Gelber Muskateller, Roter Muskateller, Moscato, Muscat
-Portugieser;Blauer Portugieser
-Riesling;Wei√üer Riesling, Rheinriesling, Riesling renano
-Silvaner;Gr√ºner Silvaner, Sylvaner
-Gr√ºner Veltiner;Veltliner
+grape_variety,synonyme
+Grenache,"Garnacha,  Cannonau,  Alicante,  Grenache noir,  Granacha Negra,  Granacha Tinta,  Garnatxa,  Guarnaccia"
+Pinot Noir,"Pinot Nero,  Sp‰tburgunder,  Blauburgunder,  Blauer Augustiner,  Clevner,  Cortaillod,  Blauer Sp‰tburgunder"
+Chardonnay,"Arboisier,  Auvernas Blanc,  Auxerrois Blanc,  Chablis,  Gelber Burgunder,  Weisser Rul‰nder"
+Primitivo,"Plavac Veliki,  Zinfandel"
+Gutedel,"Abelone,  Chasselas,  Fendant,  White Sweetwater,  Weiﬂer Gutedel,  Roter Gutedel,  Chasselas"
+Pinot Gris,"Grauburgunder,  Grauer Burgunder,  Pinit grigio,  Rul‰nder"
+Mencia,"Fernao Pires Tinta, Giao, Jaen, Jaen du Dao, Jaen Galego, Jaen Galeno, Jaen Noir, Jaen Tinto, Loureiro Tinto, Mencin, Tinto Mencia, Tinto Mollar"
+Carignan,"Carignano,  Carinena,  Mazuelo"
+Lemberger,"Blaufr‰nkisch,  Blauer Lemberger"
+Mourv√®dre,"Monastrell,  Mataro"
+Syrah,Shiraz
+Tempranillo,"Aragones,  Tinta Roriz,  Tinto Fino,  Tinto de Toro,  Tinta del Pais "
+Trollinger,"Blauer Trollinger,Vernatsch"
+Pinot Blanc,"Weiﬂburgunder,  Weiﬂer Burgunder,  Pinot bianco"
+Elbling,"Weiﬂer Elbling,  Roter Elbling"
+Fr¸hburgunder,Blauer Fr¸hburgunder
+Malinger,Fr¸her Malinger
+Malvasier,"Fr¸her roter Malvasier,  Malvoisie"
+M¸llerrebe,"Schwarzriesling,  Pinot Meunier"
+M¸ller-Thurgau,Rivaner
+Muskateller,"Gelber Muskateller,  Roter Muskateller,  Moscato,  Muscat"
+Portugieser,Blauer Portugieser
+Riesling,"Weiﬂer Riesling,  Rheinriesling,  Riesling renano"
+Silvaner,"Gr¸ner Silvaner,  Sylvaner"
+Gr¸ner Veltiner,Veltliner
+Catarratto,"Carricante, Catarratteddu"
